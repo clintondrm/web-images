@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link media="all" rel="stylesheet" href="./css/rivet.css">
+  <link media="all" rel="stylesheet" href="./css/rivet-collapsible.min.css">
+  <link media="all" rel="stylesheet" href="./css/croppie.css">
+  <link href="https://assets.iu.edu/favicon.ico" rel="shortcut icon" type="image/x-icon">
+  <title>IU Web Framework Images</title>
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-79250051-1', 'auto');
+  ga('require', 'displayfeatures');
+  ga('send', 'pageview');
+  </script>
+  <style>
+    footer a { text-decoration: underline !important; }
+  </style>
+</head>
+
+<body>
+  <header class="rvt-header" role="banner">
+    <a class="rvt-skip-link" href="#main-content">Skip to content</a>
+    <div class="rvt-header__trident">
+      <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="60" height="70" viewBox="0 0 60 70"
+        aria-labelledby="iu-logo">
+        <title id="iu-logo">Indiana University</title>
+        <rect width="60" height="70" fill="#900" />
+        <polygon
+          points="35.96 18.44 35.96 21.84 38.52 21.84 38.52 40.51 33.41 40.51 33.41 15.9 35.96 15.9 35.96 12.5 24.04 12.5 24.04 15.9 26.58 15.9 26.58 40.51 21.48 40.51 21.48 21.84 24.04 21.84 24.04 18.44 12.09 18.44 12.09 21.84 14.65 21.84 14.65 43.79 18.72 48.15 26.58 48.15 26.58 53.26 24.04 53.26 24.04 57.5 35.96 57.5 35.96 53.26 33.41 53.26 33.41 48.15 40.93 48.15 45.33 43.79 45.33 21.84 47.91 21.84 47.91 18.44 35.96 18.44"
+          fill="#fff" />
+      </svg>
+    </div>
+    <span class="rvt-header__title">
+      <a href="index.html">IU Web Framework Images</a>
+    </span>
+  </header>
+  <div id="croppie-base-container" style="opacity:0; position:absolute; height:10000px; top:-10000px">
+    <div class="croppie-base" id="croppie-1x1" style="margin-bottom:40px; width:600px; height:600px;"></div>
+    <div class="croppie-base" id="croppie-2x1" style="margin-bottom:40px; width:600px; height:400px;"></div>
+    <div class="croppie-base" id="croppie-2x3" style="margin-bottom:40px; width:600px; height:400px;"></div>
+    <div class="croppie-base" id="croppie-3x1" style="margin-bottom:40px; width:600px; height:200px;"></div>
+    <div class="croppie-base" id="croppie-3x1b" style="margin-bottom:40px; width:600px; height:400px;"></div>
+    <div class="croppie-base" id="croppie-3x2" style="margin-bottom:40px; width:600px; height:400px;"></div>
+    <div class="croppie-base" id="croppie-3x2b" style="margin-bottom:40px; width:600px; height:400px;"></div>
+    <div class="croppie-base" id="croppie-3x2c" style="margin-bottom:40px; width:600px; height:400px;"></div>
+  </div>
+  <main role="main" class="rvt-p-all-lg" id="main-content">
+    <div class="rvt-container">
+      <div class="rvt-grid">
+        <div class="rvt-grid__item-4-md-up rvt-p-all-xl">
+          <form>
+            <h2 class="rvt-ts-lg rvt-m-bottom-md">Input File</h2>
+            <p>Most modern image types are accepted.</p>
+            <div class="rvt-file" data-upload="image-upload">
+              <input type="file" id="image-upload" aria-describedby="file-description">
+              <label for="image-upload" class="rvt-button">
+                <span>Upload a file</span>
+                <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                  <path fill="currentColor"
+                    d="M10.41,1H3.5A1.3,1.3,0,0,0,2.2,2.3V13.7A1.3,1.3,0,0,0,3.5,15h9a1.3,1.3,0,0,0,1.3-1.3V4.39ZM11.8,5.21V6H9.25V3h.34ZM4.2,13V3h3V6.75A1.25,1.25,0,0,0,8.5,8h3.3v5Z" />
+                </svg>
+              </label>
+              <div class="rvt-file__preview" data-file-preview="image-upload" id="file-description">
+                No file selected
+              </div>
+            </div>
+            <hr class="rvt-m-top-md" />
+            <label for="filename" class="rvt-m-top-sm workspace">Filename</label>
+            <div class="rvt-input-group workspace">
+              <input class="rvt-input-group__input" type="text" id="filename" aria-describedby="filename-note">
+              <div class="rvt-input-group__append">
+                <div class="rvt-input-group__text" id="filename-note">-768x512.jpg</div>
+              </div>
+            </div>
+          </form>
+          <img id="image-preview" class="workspace" style="margin-top:30px; max-width:60%; max-height:500px;" />
+          <p id="original-size-display"></p>
+        </div>
+        <div class="rvt-grid__item-8-md-up rvt-p-all-xl">
+
+          <nav class="rvt-menu workspace-menu rvt-m-bottom-md" aria-label="Section navigation">
+            <ul class="rvt-menu__list">
+              <li class="rvt-menu__item">
+                <a href="#framework" aria-current="page">IU Web Framework</a>
+              </li>
+              <li class="rvt-menu__item">
+                <a href="#custom">Custom Sizes</a>
+              </li>
+              <li class="rvt-menu__item">
+                <a href="#social">Social Media</a>
+              </li>
+            </ul>
+          </nav>
+
+          <div class="workspace" style="display:none" data-workspace="framework">
+            <h2 class="rvt-ts-lg rvt-m-bottom-md">IU Web Framework</h2>
+            <div class="rvt-collapsible-accordion" data-accordion="framework-acc" role="group">
+
+              <div class="rvt-collapsible rvt-collapsible--panel">
+                <h3 class="rvt-collapsible__title">
+                  <button id="banners-label" data-collapsible="banners" aria-expanded="false">
+                    <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                      <path fill="currentColor"
+                        d="M5.5,15a1,1,0,0,1-.77-1.64L9.2,8,4.73,2.64A1,1,0,0,1,6.27,1.36L11.13,7.2a1.25,1.25,0,0,1,0,1.61L6.27,14.64A1,1,0,0,1,5.5,15ZM9.6,8.48h0Zm0-1h0Z">
+                      </path>
+                    </svg>
+                    <span>Framework Banners</span>
+                  </button>
+                </h3>
+                <div class="rvt-collapsible__content rvt-p-top-sm" id="banners" aria-hidden="true"
+                  aria-labelledby="banners-label">
+                  <h3 class="rvt-ts-md rvt-m-bottom-sm">3:1 (Used for Desktop &amp; Tablet)</h3>
+                  <div id="croppie-3x1-container"></div>
+                  <h3 class="rvt-ts-md rvt-m-bottom-sm">3:2 (Used for Mobile)</h3>
+                  <div id="croppie-3x2-container"></div>
+                  <button
+                    onclick="editor.download(1800,600,editor.croppie31, 'desktop'); editor.download(1200,400,editor.croppie31, 'tablet'); editor.download(768,512,editor.croppie32, 'mobile')"
+                    data-min-width="1800" data-min-height="600" class="rvt-button rvt-m-top-sm">Download Banner
+                    Images</button>
+                </div>
+              </div>
+
+              <div class="rvt-collapsible rvt-collapsible--panel">
+                <h3 class="rvt-collapsible__title">
+                  <button id="midpage-label" data-collapsible="midpage" aria-expanded="false">
+                    <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                      <path fill="currentColor"
+                        d="M5.5,15a1,1,0,0,1-.77-1.64L9.2,8,4.73,2.64A1,1,0,0,1,6.27,1.36L11.13,7.2a1.25,1.25,0,0,1,0,1.61L6.27,14.64A1,1,0,0,1,5.5,15ZM9.6,8.48h0Zm0-1h0Z">
+                      </path>
+                    </svg>
+                    <span>Mid-page Parallax and non-parallax</span>
+                  </button>
+                </h3>
+                <div class="rvt-collapsible__content rvt-p-top-sm" id="midpage" aria-hidden="true"
+                  aria-labelledby="midpage-label">
+                  <h3 class="rvt-ts-md rvt-m-bottom-sm">3:2 (Parallax)</h3>
+                  <div id="croppie-3x2-container-c"></div>
+                  <button onclick="editor.download(3072,2048, editor.croppie32c, 'parallax')" data-min-width="3072"
+                    data-min-height="2048" class="rvt-button rvt-m-top-sm">Download Parallax image</button>
+                  <h3 class="rvt-ts-md rvt-m-bottom-sm">3:1 (Non-parallax)</h3>
+                  <div id="croppie-3x1-container-b"></div>
+                  <button onclick="editor.download(1800,600, editor.croppie31b, 'non-parallax')" data-min-width="1800"
+                    data-min-height="600" class="rvt-button rvt-m-top-sm">Download Non-parallax image</button>
+                </div>
+              </div>
+
+              <div class="rvt-collapsible rvt-collapsible--panel">
+                <h3 class="rvt-collapsible__title">
+                  <button id="standard-11-label" data-collapsible="standard-11" aria-expanded="false">
+                    <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                      <path fill="currentColor"
+                        d="M5.5,15a1,1,0,0,1-.77-1.64L9.2,8,4.73,2.64A1,1,0,0,1,6.27,1.36L11.13,7.2a1.25,1.25,0,0,1,0,1.61L6.27,14.64A1,1,0,0,1,5.5,15ZM9.6,8.48h0Zm0-1h0Z">
+                      </path>
+                    </svg>
+                    <span>1:1 Standard (768x768)</span>
+                  </button>
+                </h3>
+                <div class="rvt-collapsible__content rvt-p-top-sm" id="standard-11" aria-hidden="true"
+                  aria-labelledby="standard-11-label">
+                  <h3 class="rvt-ts-md rvt-m-bottom-sm">1:1 Standard (768x768)</h3>
+                  <div id="croppie-1x1-container"></div>
+                  <button onclick="editor.download(768,768,editor.croppie11, 'square')" data-min-width="768" data-min-height="768"
+                    class="rvt-button rvt-m-top-sm">Download Image</button>
+                </div>
+              </div>
+
+              <div class="rvt-collapsible rvt-collapsible--panel">
+                <h3 class="rvt-collapsible__title">
+                  <button id="standard-32-label" data-collapsible="standard-32" aria-expanded="false">
+                    <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                      <path fill="currentColor"
+                        d="M5.5,15a1,1,0,0,1-.77-1.64L9.2,8,4.73,2.64A1,1,0,0,1,6.27,1.36L11.13,7.2a1.25,1.25,0,0,1,0,1.61L6.27,14.64A1,1,0,0,1,5.5,15ZM9.6,8.48h0Zm0-1h0Z">
+                      </path>
+                    </svg>
+                    <span>3:2 Standard (768x512)</span>
+                  </button>
+                </h3>
+                <div class="rvt-collapsible__content rvt-p-top-sm" id="standard-32" aria-hidden="true"
+                  aria-labelledby="standard-32-label">
+                  <h3 class="rvt-ts-md rvt-m-bottom-sm">3:2 Standard (768x512)</h3>
+                  <div id="croppie-3x2-container-b"></div>
+                  <button onclick="editor.download(768,512,editor.croppie32b, '')" data-min-width="768"
+                    data-min-height="512" class="rvt-button rvt-m-top-sm">Download Image</button>
+                </div>
+              </div>
+
+              <div class="rvt-collapsible rvt-collapsible--panel">
+                <h3 class="rvt-collapsible__title">
+                  <button id="standard-43-label" data-collapsible="standard-43" aria-expanded="false">
+                    <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                      <path fill="currentColor"
+                        d="M5.5,15a1,1,0,0,1-.77-1.64L9.2,8,4.73,2.64A1,1,0,0,1,6.27,1.36L11.13,7.2a1.25,1.25,0,0,1,0,1.61L6.27,14.64A1,1,0,0,1,5.5,15ZM9.6,8.48h0Zm0-1h0Z">
+                      </path>
+                    </svg>
+                    <span>4:3 Standard (1024x768)</span>
+                  </button>
+                </h3>
+                <div class="rvt-collapsible__content rvt-p-top-sm" id="standard-43" aria-hidden="true"
+                  aria-labelledby="standard-43-label">
+                  <h3 class="rvt-ts-md rvt-m-bottom-sm">4:3 Standard (1024x768)</h3>
+                  <div id="croppie-4x3-container"></div>
+                </div>
+              </div>
+
+              <div class="rvt-collapsible rvt-collapsible--panel">
+                <h3 class="rvt-collapsible__title">
+                  <button id="standard-21-label" data-collapsible="standard-21" aria-expanded="false">
+                    <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                      <path fill="currentColor"
+                        d="M5.5,15a1,1,0,0,1-.77-1.64L9.2,8,4.73,2.64A1,1,0,0,1,6.27,1.36L11.13,7.2a1.25,1.25,0,0,1,0,1.61L6.27,14.64A1,1,0,0,1,5.5,15ZM9.6,8.48h0Zm0-1h0Z">
+                      </path>
+                    </svg>
+                    <span>2:1 Standard (Varies)</span>
+                  </button>
+                </h3>
+                <div class="rvt-collapsible__content rvt-p-top-sm" id="standard-21" aria-hidden="true"
+                  aria-labelledby="standard-21-label">
+                  <h3 class="rvt-ts-md rvt-m-bottom-sm">2:1 Standard (Varies)</h3>
+                  <div id="croppie-2x1-container"></div>
+                  <button onclick="editor.download(768, 384, editor.croppie21, '')" data-min-width="768"
+                    data-min-height="384" class="rvt-button rvt-m-top-sm">Download 768x384 Image</button>
+                  <button onclick="editor.download(1024, 512, editor.croppie21, '')" data-min-width="1024"
+                    data-min-height="512" class="rvt-button rvt-m-top-sm">Download 1024x512 Image</button>
+                  <button onclick="editor.download(1536, 768, editor.croppie21, '')" data-min-width="1536"
+                    data-min-height="768" class="rvt-button rvt-m-top-sm">Download 1536x768 Image</button>
+                </div>
+              </div>
+
+              <div class="rvt-collapsible rvt-collapsible--panel">
+                <h3 class="rvt-collapsible__title">
+                  <button id="standard-23-label" data-collapsible="standard-23" aria-expanded="false">
+                    <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                      <path fill="currentColor"
+                        d="M5.5,15a1,1,0,0,1-.77-1.64L9.2,8,4.73,2.64A1,1,0,0,1,6.27,1.36L11.13,7.2a1.25,1.25,0,0,1,0,1.61L6.27,14.64A1,1,0,0,1,5.5,15ZM9.6,8.48h0Zm0-1h0Z">
+                      </path>
+                    </svg>
+                    <span>2:3 Standard (512x768)</span>
+                  </button>
+                </h3>
+                <div class="rvt-collapsible__content rvt-p-top-sm" id="standard-23" aria-hidden="true"
+                  aria-labelledby="standard-23-label">
+                  <h3 class="rvt-ts-md rvt-m-bottom-sm">2:3 Standard (512x768)</h3>
+                  <div id="croppie-2x3-container"></div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="workspace" style="display:none" data-workspace="custom">
+            <h2 class="rvt-ts-lg rvt-m-bottom-md">Custom Sizes</h2>
+
+            <div class="rvt-collapsible-accordion" data-accordion="custom-acc" role="group">
+
+              <div class="rvt-collapsible rvt-collapsible--panel">
+                <h3 class="rvt-collapsible__title">
+                  <button id="standard-orig-label" data-collapsible="standard-orig" aria-expanded="false">
+                    <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                      <path fill="currentColor"
+                        d="M5.5,15a1,1,0,0,1-.77-1.64L9.2,8,4.73,2.64A1,1,0,0,1,6.27,1.36L11.13,7.2a1.25,1.25,0,0,1,0,1.61L6.27,14.64A1,1,0,0,1,5.5,15ZM9.6,8.48h0Zm0-1h0Z">
+                      </path>
+                    </svg>
+                    <span>Original Size</span>
+                  </button>
+                </h3>
+                <div class="rvt-collapsible__content rvt-p-top-sm" id="standard-orig" aria-hidden="true"
+                  aria-labelledby="standard-orig-label">
+                  <h3 class="rvt-ts-md rvt-m-bottom-sm">Original Size</h3>
+                  <div id="croppie-orig-container"></div>
+                </div>
+              </div>
+
+              <div class="rvt-collapsible rvt-collapsible--panel">
+                <h3 class="rvt-collapsible__title">
+                  <button id="standard-arb-label" data-collapsible="standard-arb" aria-expanded="false">
+                    <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                      <path fill="currentColor"
+                        d="M5.5,15a1,1,0,0,1-.77-1.64L9.2,8,4.73,2.64A1,1,0,0,1,6.27,1.36L11.13,7.2a1.25,1.25,0,0,1,0,1.61L6.27,14.64A1,1,0,0,1,5.5,15ZM9.6,8.48h0Zm0-1h0Z">
+                      </path>
+                    </svg>
+                    <span>Custom Size</span>
+                  </button>
+                </h3>
+                <div class="rvt-collapsible__content rvt-p-top-sm" id="standard-arb" aria-hidden="true"
+                  aria-labelledby="standard-arb-label">
+                  <h3 class="rvt-ts-md rvt-m-bottom-sm">Custom Size</h3>
+                  <div class="rvt-grid" id="custom-form">
+                    <div class="rvt-grid__item">
+                      <label for="custom-width-input">Width</label>
+                      <input type="text" id="custom-width-input" aria-describedby="custom-width-input-note">
+                    </div>
+                    <div class="rvt-grid__item">
+                      <label for="custom-height-input">Height (px)</label>
+                      <input type="text" id="custom-height-input" aria-describedby="custom-height-input-note">
+                    </div>
+                    <div class="rvt-grid__item" style="display:flex; align-items: flex-end">
+                      <button class="rvt-button" id="submit-custom">Update</button>
+                    </div>
+                  </div>
+                  <div id="croppie-arb-container" class="rvt-m-top-md"></div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="workspace" style="display:none" data-workspace="social">
+            <h2 class="rvt-ts-lg rvt-m-bottom-md">Social Media</h2>
+            <h3 class="rvt-ts-md rvt-m-top-md rvt-m-bottom-md" style="font-weight:bold">Instagram</h3>
+
+            <div class="rvt-collapsible-accordion" data-accordion="insta-acc" role="group">
+
+              <div class="rvt-collapsible rvt-collapsible--panel">
+                <h3 class="rvt-collapsible__title">
+                  <button id="instagram-11-label" data-collapsible="instagram-11" aria-expanded="false">
+                    <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                      <path fill="currentColor"
+                        d="M5.5,15a1,1,0,0,1-.77-1.64L9.2,8,4.73,2.64A1,1,0,0,1,6.27,1.36L11.13,7.2a1.25,1.25,0,0,1,0,1.61L6.27,14.64A1,1,0,0,1,5.5,15ZM9.6,8.48h0Zm0-1h0Z">
+                      </path>
+                    </svg>
+                    <span>1:1 Square Photo (1080x1080)</span>
+                  </button>
+                </h3>
+                <div class="rvt-collapsible__content rvt-p-top-sm" id="instagram-11" aria-hidden="true"
+                  aria-labelledby="instagram-11-label">
+                  <div id="croppie-insta-1x1-container"></div>
+               </div>
+              </div>
+
+              <div class="rvt-collapsible rvt-collapsible--panel">
+                <h3 class="rvt-collapsible__title">
+                  <button id="instagram-1911-label" data-collapsible="instagram-1911" aria-expanded="false">
+                    <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                      <path fill="currentColor"
+                        d="M5.5,15a1,1,0,0,1-.77-1.64L9.2,8,4.73,2.64A1,1,0,0,1,6.27,1.36L11.13,7.2a1.25,1.25,0,0,1,0,1.61L6.27,14.64A1,1,0,0,1,5.5,15ZM9.6,8.48h0Zm0-1h0Z">
+                      </path>
+                    </svg>
+                    <span>1.91:1 Landscape Photo (1080x608)</span>
+                  </button>
+                </h3>
+                <div class="rvt-collapsible__content rvt-p-top-sm" id="instagram-1911" aria-hidden="true"
+                  aria-labelledby="instagram-1911-label">
+                  <div id="croppie-insta-191x1-container"></div>
+               </div>
+              </div>
+
+              <div class="rvt-collapsible rvt-collapsible--panel">
+                <h3 class="rvt-collapsible__title">
+                  <button id="instagram-portrait-label" data-collapsible="instagram-portrait" aria-expanded="false">
+                    <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                      <path fill="currentColor"
+                        d="M5.5,15a1,1,0,0,1-.77-1.64L9.2,8,4.73,2.64A1,1,0,0,1,6.27,1.36L11.13,7.2a1.25,1.25,0,0,1,0,1.61L6.27,14.64A1,1,0,0,1,5.5,15ZM9.6,8.48h0Zm0-1h0Z">
+                      </path>
+                    </svg>
+                    <span>4:5 Portrait Photo (1080x1350)</span>
+                  </button>
+                </h3>
+                <div class="rvt-collapsible__content rvt-p-top-sm" id="instagram-portrait" aria-hidden="true"
+                  aria-labelledby="instagram-portrait-label">
+                  <div id="croppie-insta-4x5-container"></div>
+               </div>
+              </div>
+
+              <div class="rvt-collapsible rvt-collapsible--panel">
+                <h3 class="rvt-collapsible__title">
+                  <button id="instagram-story-label" data-collapsible="instagram-story" aria-expanded="false">
+                    <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                      <path fill="currentColor"
+                        d="M5.5,15a1,1,0,0,1-.77-1.64L9.2,8,4.73,2.64A1,1,0,0,1,6.27,1.36L11.13,7.2a1.25,1.25,0,0,1,0,1.61L6.27,14.64A1,1,0,0,1,5.5,15ZM9.6,8.48h0Zm0-1h0Z">
+                      </path>
+                    </svg>
+                    <span>9:16 Instagram Story Photo (1080x1920)</span>
+                  </button>
+                </h3>
+                <div class="rvt-collapsible__content rvt-p-top-sm" id="instagram-story" aria-hidden="true"
+                  aria-labelledby="instagram-story-label">
+                  <div id="croppie-insta-9x16-container"></div>
+               </div>
+              </div>
+
+            </div>
+
+          <h3 class="rvt-ts-md rvt-m-top-md rvt-m-bottom-md" style="font-weight:bold">Facebook</h3>
+
+          <div class="rvt-collapsible-accordion" data-accordion="insta-acc" role="group">
+
+            <div class="rvt-collapsible rvt-collapsible--panel">
+              <h3 class="rvt-collapsible__title">
+                <button id="facebook-11-label" data-collapsible="facebook-11" aria-expanded="false">
+                  <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                    <path fill="currentColor"
+                      d="M5.5,15a1,1,0,0,1-.77-1.64L9.2,8,4.73,2.64A1,1,0,0,1,6.27,1.36L11.13,7.2a1.25,1.25,0,0,1,0,1.61L6.27,14.64A1,1,0,0,1,5.5,15ZM9.6,8.48h0Zm0-1h0Z">
+                    </path>
+                  </svg>
+                  <span>1:1 Profile Photo (180x180)</span>
+                </button>
+              </h3>
+              <div class="rvt-collapsible__content rvt-p-top-sm" id="facebook-11" aria-hidden="true"
+                aria-labelledby="facebook-11-label">
+                <div id="croppie-facebook-1x1-container"></div>
+             </div>
+            </div>
+
+            <div class="rvt-collapsible rvt-collapsible--panel">
+              <h3 class="rvt-collapsible__title">
+                <button id="facebook-20578-label" data-collapsible="facebook-20578" aria-expanded="false">
+                  <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                    <path fill="currentColor"
+                      d="M5.5,15a1,1,0,0,1-.77-1.64L9.2,8,4.73,2.64A1,1,0,0,1,6.27,1.36L11.13,7.2a1.25,1.25,0,0,1,0,1.61L6.27,14.64A1,1,0,0,1,5.5,15ZM9.6,8.48h0Zm0-1h0Z">
+                    </path>
+                  </svg>
+                  <span>205:78 Banner Photo (820x312)</span>
+                </button>
+              </h3>
+              <div class="rvt-collapsible__content rvt-p-top-sm" id="facebook-20578" aria-hidden="true"
+                aria-labelledby="facebook-20578-label">
+                <div id="croppie-facebook-205x78-container"></div>
+             </div>
+            </div>
+
+            <div class="rvt-collapsible rvt-collapsible--panel">
+              <h3 class="rvt-collapsible__title">
+                <button id="facebook-12063-label" data-collapsible="facebook-12063" aria-expanded="false">
+                  <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                    <path fill="currentColor"
+                      d="M5.5,15a1,1,0,0,1-.77-1.64L9.2,8,4.73,2.64A1,1,0,0,1,6.27,1.36L11.13,7.2a1.25,1.25,0,0,1,0,1.61L6.27,14.64A1,1,0,0,1,5.5,15ZM9.6,8.48h0Zm0-1h0Z">
+                    </path>
+                  </svg>
+                  <span>120:63 Shared Photo (1200x630)</span>
+                </button>
+              </h3>
+              <div class="rvt-collapsible__content rvt-p-top-sm" id="facebook-12063" aria-hidden="true"
+                aria-labelledby="facebook-12063-label">
+                <div id="croppie-facebook-1200-630-container"></div>
+             </div>
+            </div>
+
+            <div class="rvt-collapsible rvt-collapsible--panel">
+              <h3 class="rvt-collapsible__title">
+                <button id="facebook-event-label" data-collapsible="facebook-event" aria-expanded="false">
+                  <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                    <path fill="currentColor"
+                      d="M5.5,15a1,1,0,0,1-.77-1.64L9.2,8,4.73,2.64A1,1,0,0,1,6.27,1.36L11.13,7.2a1.25,1.25,0,0,1,0,1.61L6.27,14.64A1,1,0,0,1,5.5,15ZM9.6,8.48h0Zm0-1h0Z">
+                    </path>
+                  </svg>
+                  <span>16:9 Event Page Banner (1920x1080)</span>
+                </button>
+              </h3>
+              <div class="rvt-collapsible__content rvt-p-top-sm" id="facebook-event" aria-hidden="true"
+                aria-labelledby="facebook-event-label">
+                <div id="croppie-facebook-16x9-container"></div>
+             </div>
+            </div>
+
+
+          <h3 class="rvt-ts-md rvt-m-top-md rvt-m-bottom-md" style="font-weight:bold">Twitter</h3>
+
+            <div class="rvt-collapsible-accordion" data-accordion="twitter-acc" role="group">
+
+              <div class="rvt-collapsible rvt-collapsible--panel">
+                <h3 class="rvt-collapsible__title">
+                  <button id="twitter-31-label" data-collapsible="twitter-31" aria-expanded="false">
+                    <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                      <path fill="currentColor"
+                        d="M5.5,15a1,1,0,0,1-.77-1.64L9.2,8,4.73,2.64A1,1,0,0,1,6.27,1.36L11.13,7.2a1.25,1.25,0,0,1,0,1.61L6.27,14.64A1,1,0,0,1,5.5,15ZM9.6,8.48h0Zm0-1h0Z">
+                      </path>
+                    </svg>
+                    <span>3:1 Header Photo (1500x500)</span>
+                  </button>
+                </h3>
+                <div class="rvt-collapsible__content rvt-p-top-sm" id="twitter-31" aria-hidden="true"
+                  aria-labelledby="twitter-31-label">
+                  <div id="croppie-twitter-3x1-container"></div>
+               </div>
+              </div>
+
+              <div class="rvt-collapsible rvt-collapsible--panel">
+                <h3 class="rvt-collapsible__title">
+                  <button id="twitter-11-label" data-collapsible="twitter-11" aria-expanded="false">
+                    <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                      <path fill="currentColor"
+                        d="M5.5,15a1,1,0,0,1-.77-1.64L9.2,8,4.73,2.64A1,1,0,0,1,6.27,1.36L11.13,7.2a1.25,1.25,0,0,1,0,1.61L6.27,14.64A1,1,0,0,1,5.5,15ZM9.6,8.48h0Zm0-1h0Z">
+                      </path>
+                    </svg>
+                    <span>1:1 Profile Photo (500x500)</span>
+                  </button>
+                </h3>
+                <div class="rvt-collapsible__content rvt-p-top-sm" id="twitter-11" aria-hidden="true"
+                  aria-labelledby="twitter-11-label">
+                  <div id="croppie-twitter-1x1-container"></div>
+               </div>
+              </div>
+
+
+
+          <h3 class="rvt-ts-md rvt-m-top-md rvt-m-bottom-md" style="font-weight:bold">YouTube</h3>
+
+            <div class="rvt-collapsible-accordion" data-accordion="youtube-acc" role="group">
+
+              <div class="rvt-collapsible rvt-collapsible--panel">
+                <h3 class="rvt-collapsible__title">
+                  <button id="youtube-169-label" data-collapsible="youtube-169" aria-expanded="false">
+                    <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                      <path fill="currentColor"
+                        d="M5.5,15a1,1,0,0,1-.77-1.64L9.2,8,4.73,2.64A1,1,0,0,1,6.27,1.36L11.13,7.2a1.25,1.25,0,0,1,0,1.61L6.27,14.64A1,1,0,0,1,5.5,15ZM9.6,8.48h0Zm0-1h0Z">
+                      </path>
+                    </svg>
+                    <span>16:9 Channel Art Photo (2560x1440)</span>
+                  </button>
+                </h3>
+                <div class="rvt-collapsible__content rvt-p-top-sm" id="youtube-169" aria-hidden="true"
+                  aria-labelledby="youtube-169-label">
+                  <div id="croppie-youtube-16x9-container"></div>
+               </div>
+              </div>
+
+              <div class="rvt-collapsible rvt-collapsible--panel">
+                <h3 class="rvt-collapsible__title">
+                  <button id="youtube-1692-label" data-collapsible="youtube-1692" aria-expanded="false">
+                    <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                      <path fill="currentColor"
+                        d="M5.5,15a1,1,0,0,1-.77-1.64L9.2,8,4.73,2.64A1,1,0,0,1,6.27,1.36L11.13,7.2a1.25,1.25,0,0,1,0,1.61L6.27,14.64A1,1,0,0,1,5.5,15ZM9.6,8.48h0Zm0-1h0Z">
+                      </path>
+                    </svg>
+                    <span>16:9 Widescreen Video Thumbnail (1280x720)</span>
+                  </button>
+                </h3>
+                <div class="rvt-collapsible__content rvt-p-top-sm" id="youtube-1692" aria-hidden="true"
+                  aria-labelledby="youtube-1692-label">
+                  <div id="croppie-youtube-16x9-2-container"></div>
+               </div>
+              </div>
+
+              <div class="rvt-collapsible rvt-collapsible--panel">
+                <h3 class="rvt-collapsible__title">
+                  <button id="youtube-265149-label" data-collapsible="youtube-265149" aria-expanded="false">
+                    <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                      <path fill="currentColor"
+                        d="M5.5,15a1,1,0,0,1-.77-1.64L9.2,8,4.73,2.64A1,1,0,0,1,6.27,1.36L11.13,7.2a1.25,1.25,0,0,1,0,1.61L6.27,14.64A1,1,0,0,1,5.5,15ZM9.6,8.48h0Zm0-1h0Z">
+                      </path>
+                    </svg>
+                    <span>265:149 Channel Banner Photo (2120x1192)</span>
+                  </button>
+                </h3>
+                <div class="rvt-collapsible__content rvt-p-top-sm" id="youtube-265149" aria-hidden="true"
+                  aria-labelledby="youtube-265149-label">
+                  <div id="croppie-youtube-265149-container"></div>
+               </div>
+              </div>
+
+              <div class="rvt-collapsible rvt-collapsible--panel">
+                <h3 class="rvt-collapsible__title">
+                  <button id="youtube-11-label" data-collapsible="youtube-11" aria-expanded="false">
+                    <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                      <path fill="currentColor"
+                        d="M5.5,15a1,1,0,0,1-.77-1.64L9.2,8,4.73,2.64A1,1,0,0,1,6.27,1.36L11.13,7.2a1.25,1.25,0,0,1,0,1.61L6.27,14.64A1,1,0,0,1,5.5,15ZM9.6,8.48h0Zm0-1h0Z">
+                      </path>
+                    </svg>
+                    <span>1:1 Channel Icon (800x800)</span>
+                  </button>
+                </h3>
+                <div class="rvt-collapsible__content rvt-p-top-sm" id="youtube-11" aria-hidden="true"
+                  aria-labelledby="youtube-11-label">
+                  <div id="croppie-youtube-1x1-container"></div>
+               </div>
+              </div>
+              
+            </div>
+          </div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer class="rvt-footer m-top-xxl" role="contentinfo">
+    <div class="rvt-footer__copyright-lockup">
+      <div class="rvt-m-right-sm rvt-footer__trident">
+        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="20" height="25" viewBox="0 0 20 25">
+          <polygon
+            points="13.33 3.32 13.33 5.21 14.76 5.21 14.76 15.64 11.9 15.64 11.9 1.9 13.33 1.9 13.33 0 6.67 0 6.67 1.9 8.09 1.9 8.09 15.64 5.24 15.64 5.24 5.21 6.67 5.21 6.67 3.32 0 3.32 0 5.21 1.43 5.21 1.43 17.47 3.7 19.91 8.09 19.91 8.09 22.76 6.67 22.76 6.67 25.13 13.33 25.13 13.33 22.76 11.9 22.76 11.9 19.91 16.1 19.91 18.56 17.47 18.56 5.21 20 5.21 20 3.32 13.33 3.32"
+            fill="#900" />
+        </svg>
+      </div>
+      <p><a href="https://www.iu.edu/copyright/index.html">Copyright</a> &copy; 2020 The Trustees of <a
+          href="https://www.iu.edu/">Indiana University</a></p>
+    </div>
+    <ul class="rvt-footer__aux-links">
+      <li class="rvt-footer__aux-item">
+        <!-- You can learn more about privacy policies and generate one
+                     for your site here:
+                     https://protect.iu.edu/online-safety/tools/privacy-notice/index.html -->
+        <a href="https://apps.ovpue.indiana.edu/privacy">Privacy Policy</a>
+      </li>
+      <li class="rvt-footer__aux-item">
+        <a href="https://accessibility.iu.edu/">Accessibility help</a>
+      </li>
+    </ul>
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.4.0.min.js"
+    integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=" crossorigin="anonymous"></script>
+  <script src="./js/rivet.min.js"></script>
+  <script src="./js/rivet-collapsible.min.js"></script>
+  <script src="./js/customized-croppie.js"></script>
+  <script src="./js/filesaver.js"></script>
+  <script src="./js/compressor.min.js?v=2020-09-29"></script>
+  <script src="./js/app.js?v=2020-09-29"></script>
+  <script>
+    $('[data-workspace]').hide();
+
+    function updateDisplay() {
+      var hash = window.location.hash.substring(1); //Puts hash in variable, and removes the # character
+      $('[data-workspace]').hide();
+      $('[data-workspace="' + hash + '"]').show();
+      $('.workspace-menu a').removeAttr('aria-current');
+      $('.workspace-menu a[href="#' + hash + '"]').attr('aria-current', 'page');
+    }
+
+    if (window.location.hash) {
+      updateDisplay();
+    } else {
+      $('[data-workspace="framework"]').show();
+      $('.workspace-menu a').removeAttr('aria-current');
+      $('.workspace-menu a[href="#framework"]').attr('aria-current', 'page');
+    }
+
+    window.onhashchange = updateDisplay;
+  </script>
+  <script>
+    Collapsible.init();
+  </script>
+</body>
+
+</html>
