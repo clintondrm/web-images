@@ -1,0 +1,9 @@
+/*!
+ *
+ * Copyright (C) 2018 The Trustees of Indiana University
+ * SPDX-License-Identifier: BSD-3-Clause
+
+ * rivet-collapsible - @version 0.2.7
+ */
+
+.rvt-collapsible__title{font-size:1rem}.rvt-collapsible__title button{margin:0;display:-ms-flexbox;display:flex;-ms-flex-align:center;align-items:center;background-color:transparent;border:none;width:100%;padding:0}.rvt-collapsible__title button:focus{outline:none;box-shadow:0 0 0 .125rem #fff,0 0 0 .25rem #006298}.rvt-collapsible__title button:hover{background-color:#eee}.rvt-collapsible__title button svg{margin-right:.5rem}.rvt-collapsible__title button[aria-expanded=true] svg{transform:rotate(90deg)}.rvt-collapsible__content[aria-hidden=true]{display:none}.rvt-collapsible--panel{border:1px solid #ddd;border-radius:.25rem}.rvt-collapsible--panel .rvt-collapsible__title{background-color:#f7f7f7;border-radius:.25rem}.rvt-collapsible--panel .rvt-collapsible__title button{border-radius:.25rem;padding:.75rem}.rvt-collapsible--panel .rvt-collapsible__title button:hover{background-color:#eee}.rvt-collapsible--panel .rvt-collapsible__title button[aria-expanded=true]{border-bottom-right-radius:0;border-bottom-left-radius:0}.rvt-collapsible--panel .rvt-collapsible__content{padding:1rem;border-top:1px solid #ddd}.rvt-collapsible-accordion .rvt-collapsible:not(:first-child){margin-top:1rem}
